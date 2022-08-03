@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style type="text/css">
+        /* Global styles */
+        html, body, h1, h2, h3, h4, h5 {
+            padding: 0;
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 4rem;
+            font-weight: 600;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 300;
+        }
+
+        h4 {
+            font-size: 1.25rem;
+            font-weight: 400;
+        }
+
+        strong {
+            font-weight: 400;
+        }
+
+        button {
+            background-color: #799567;
+            color: white;
+            font-weight: 400;
+            border: none;
+            padding: 1rem;
+            font-size: 1.5rem;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 2rem;
+        }
+
+        * {
+            font-family: Barlow, sans-serif;
+            font-weight: 300;
+        }
+
+        /* Global styles end */
+
+        /* Page layout */
+
+        .centered-row-box {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .half-width {
+            width: 50%;
+        }
+
+        .centered-column-box {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .section {
+            padding: 4rem;
+        }
+
+        .section.green {
+            background-color: #799567;
+        }
+
+        .section h3 {
+            color: #799567;
+            font-weight: 500;
+            font-size: 2rem;
+            text-transform: uppercase;
+        }
+
+        .section h4 {
+            font-weight: 500;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+        }
+
+        .section.green * {
+            color: white;
+        }
+
+        .section .content {
+            display: flex;
+            width: 100%;
+            font-size: 1.25rem;
+            align-items: center;
+        }
+
+        .section .content.spaced {
+            margin-top: 2rem;
+        }
+
+        .section.column .content {
+            flex-direction: column;
+        }
+
+        .section .content img {
+            width: 50%;
+        }
+
+        .section .content img.full-width {
+            width: 100%;
+        }
+
+        .strapline {
+            font-size: 2rem;
+            font-weight: 600;
+            width: 50%;
+            padding: 1rem 0;
+        }
+
+        .section .content .icon-subheading {
+            display: flex;
+            align-items: center;
+        }
+
+        .section .content .icon-subheading img {
+            width: 2.5rem;
+            margin-right: 0.5rem;
+        }
+
+        .section .content .icon-subtext {
+            width: 75%;
+        }
+
+        /* Page layout end */
+
+        /* Hero section */
+        .hero {
+            background-image: url(https://cattleeye.com/wp-content/uploads/2020/03/masthead-background-cows.jpg);
+            background-size: cover;
+            background-position: 50%;
+            background-repeat: no-repeat;
+            min-height: 75vh;
+            color: white;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero h1 {
+            width: 60%;
+            text-align: center;
+        }
+
+        .hero h3 {
+            margin-top: 1rem;
+            font-size: 1.5rem;
+            width: 60%;
+            text-align: center;
+        }
+
+        /* Hero section end */
+
+        /* Hero video section */
+        .video-container {
+            width: 100%;
+            min-height: 75vh;
+            position: relative;
+            background-color: #0c100a;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .video-container video {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            object-fit: cover;
+            z-index: 0;
+            opacity: 0.4;
+        }
+
+        .video-container .caption {
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        }
+
+        .video-container .caption h1 {
+            font-size: 4rem;
+            font-weight: 600;
+            width: 60%;
+            text-align: center;
+        }
+
+        .video-container .caption h3 {
+            margin-top: 2rem;
+            font-size: 1.5rem;
+            width: 60%;
+            text-align: center;
+        }
+
+        /* Hero video section end */
+
+        /* Badge component */
+        .badge {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0.25rem;
+            background-color: white;
+            color: #799567 !important;
+            font-size: 0.75rem;
+            font-weight: 600;
+            border-radius: 5px;
+            margin-left: 0.25rem;
+            position: relative;
+            bottom: 10px;
+        }
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+        <div class="video-container">
+            <video autoplay muted loop poster="https://cattleeye.com/wp-content/uploads/2020/03/cattle-eye-analyse-cows-placeholder.jpg">
+                <source src="https://cattleeye.com/wp-content/uploads/2020/04/cattle-eye-analyse-cows-master.mp4" type="video/mp4" />
+            </video>
+            <div class="caption">
+                <h1>Unleash your herd's potential</h1>
+                <h1>with autonomous video monitoring</h1>
+                <h3>CattleEye is the world's first hardware-independent autonomous livestock monitoring platform. It uses a low-cost security camera to capture video footage and provide insights into your herd's health and productivity.</h3>
+                <button>Request a demo</button>
+            </div>
+        </div>
+        <!-- <div class="hero">
+            <h1>Unleash your cow’s potential</h1>
+            <h1>with autonomous video monitoring</h1>
+            <h3>CattleEye is the world's first hardware-independent autonomous livestock monitoring platform. It uses a low-cost security camera to capture video footage and provide insights into your herd's health and productivity.</h3>
+        </div> -->
+        <div class="section how-it-works">
+            <h3>How it works</h3>
+            <div class="strapline">
+                CattleEye uses a standard security camera mounted over the exit race of a milking parlour.
+                <br/>
+                This removes the need for collars or pedometers that need regular maintenance and commissioning.
+            </div>
+            <div class="content">
+                <div>
+                    We provide a completely hands-free way to monitor your cows welfare and performance.
+                    <br/><br/>
+                    The camera captures video footage of each cow as it leaves the milking parlour. We also pull in ID information if available from your sort gate or RFID system.
+                    <br/><br/>
+                    Artifical intelligence algorithms in the cloud analyse the footage to uniquely identify the cows and monitor welfare and an increasing number of other behaviours.
+                    <br/><br/>
+                    We then deliver these insights right back to your smartphone and/or integrated with your farm's herd management system saving an average farmer £350 per cow per year.
+                </div>
+                <img src="farm-setup.png" alt="Farm Setup Graphic" />
+            </div>
+        </div>
+        <div class="section green column our-insights">
+            <h3>Our Insights</h3>
+            <div class="content spaced">
+                <div class="centered-row-box">
+                    <div class="centered-column-box half-width">
+                        <div class="icon-subheading">
+                            <img src="lameness.png" alt="Mobility" />
+                            <h4>Mobility</h4>
+                        </div>
+                        <span class="icon-subtext">CattleEye provides daily mobility scores direct to your smartphone, tablet or parlour PC. This allows for early intervention, resulting in significant cost savings and an improvement in animal welfare.</span>
+                    </div>
+                    <div class="centered-column-box half-width">
+                        <div class="icon-subheading">
+                            <img src="bcs.png" alt="Mobility" />
+                            <h4>Body Condition</h4>
+                            <div class="badge">Beta</div>
+                        </div>
+                        <span class="icon-subtext">CattleEye tracks a cow's body condition score (BCS) each time it passes under the camera, letting you monitor and adjust feed levels and other parameters in near real-time.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img class="full-width" src="insights.png" alt="Insights Graphic" />
+        <div class="section column insights-app">
+            <h3>CattleEye Insights App</h3>
+            <div class="strapline">
+                CattleEye Insights is a cross-platform dashboard accessible on your smartphone, tablet or PC.
+                <br/>
+            </div>
+            <div class="content">
+                <img class="full-width" src="screenshots.png" alt="Farm Setup Graphic" />
+                <div>
+                    CattleEye Insights enables you to monitor your cows health and performance in real-time. It provides a dashboard that tracks and visualizes a number of key metrics at both the herd and cow levels.
+                    <br/><br/>
+                    The app lets you filter through the data in a number of ways to find the exact subset of cows you are looking to monitor. It also allows you to export all available data to a CSV file for further analysis and trim list creation.
+                    <br/><br/>
+                    We have integrations with a number of different Herd Management Systems, enabling you to view and analyse all the data in your preferred system.
+                </div>
+            </div>
+        </div>
+        <div class="centered-column-box">
+            <img style="width: 50%" src="integrations.png" alt="Integrations" />
+
+        </div>
+    </div>
+  </body>
+</html>
